@@ -22,10 +22,10 @@ textarea {
 }
 
 footer {
-  display: flex;
-  flex-direction: row;
   background: black;
   color: white;
+  display: flex;
+  flex-direction: row;
 }
 
 footer > div {
