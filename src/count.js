@@ -14,7 +14,12 @@ function process() {
 
 function update(target, plural, length) {
   target.textContent = length;
-  plural.style.display = length === 1 ? "none" : "inline";
+
+  if (length === 1) {
+    plural.classList.add("hidden");
+  } else {
+    plural.classList.remove("hidden");
+  }
 }
 
 function word(value) {
