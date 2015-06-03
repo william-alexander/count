@@ -6,10 +6,22 @@ var count = {
 
 function update() {
   var value = textarea.value;
-  var char = value.length;
-  count.char.textContent = char;
-  count.word.textContent = char === 0 ? 0 : textarea.value.split(" ").length;
+  count.char.textContent = value.length;
+  count.word.textContent = word(value);
+}
+
+function word(value) {
+  var newWord = false;
+  var count = 0;
+
+  for (var i = 0; i < value.length; ++i) {
+    var word = newWord;
+    newWord = !/\s/.test(value.charAt(i));
+    if (!word && newWord) ++count;
+  }
+
+  return count;
 }
 
 window.addEventListener("load", update);
-textarea.addEventListener("keydown", update);
+textarea.addEventListener("input", update);
