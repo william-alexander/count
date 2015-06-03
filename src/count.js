@@ -1,13 +1,20 @@
 var count = {
   textarea: document.getElementById("textarea"),
   word: document.getElementById("word"),
-  char: document.getElementById("char")
+  words: document.getElementById("words"),
+  char: document.getElementById("char"),
+  chars: document.getElementById("chars")
 }
 
-function update() {
+function process() {
   var value = textarea.value;
-  count.char.textContent = value.length;
-  count.word.textContent = word(value);
+  update(count.char, count.chars, value.length);
+  update(count.word, count.words, word(value));
+}
+
+function update(target, plural, length) {
+  target.textContent = length;
+  plural.style.display = length === 1 ? "none" : "inline";
 }
 
 function word(value) {
@@ -23,5 +30,5 @@ function word(value) {
   return count;
 }
 
-window.addEventListener("load", update);
-textarea.addEventListener("input", update);
+window.addEventListener("load", process);
+textarea.addEventListener("input", process);
