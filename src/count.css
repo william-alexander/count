@@ -1,38 +1,38 @@
 body {
-  display: flex;
-  flex-direction: column;
-  font-family: sans-serif;
-  margin: 0;
-  height: 100vh;
+	display: flex;
+	flex-direction: column;
+	font-family: sans-serif;
+	margin: 0;
+	height: 100vh;
 }
 
 textarea, footer > div {
-  padding: 20px;
+	padding: 20px;
 }
 
 textarea {
-  border: none;
-  box-sizing: border-box;
-  flex: 1;
-  font-family: inherit;
-  font-size: inherit;
-  outline: none;
-  overflow: auto;
-  resize: none;
-  width: 100%;
+	border: none;
+	box-sizing: border-box;
+	flex: 1;
+	font-family: inherit;
+	font-size: inherit;
+	outline: none;
+	overflow: auto;
+	resize: none;
+	width: 100%;
 }
 
 footer {
-  background: black;
-  color: white;
-  display: flex;
+	background: black;
+	color: white;
+	display: flex;
 }
 
 footer > div {
-  flex: 1;
-  text-align: center;
+	flex: 1;
+	text-align: center;
 }
 
 .hidden {
-  display: none;
+	display: none;
 }
