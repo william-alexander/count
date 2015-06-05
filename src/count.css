@@ -6,7 +6,7 @@ body {
 	height: 100vh;
 }
 
-textarea, footer > div {
+textarea {
 	padding: 20px;
 }
 
@@ -30,6 +30,7 @@ footer {
 
 footer > div {
 	flex: 1;
+	margin: 20px;
 	text-align: center;
 }
 
