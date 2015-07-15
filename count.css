@@ -1,9 +1,17 @@
+html {
+	height: 100%;
+}
+
 body {
+	display: -webkit-flex;
 	display: flex;
+
+	-webkit-flex-direction: column;
 	flex-direction: column;
+
 	font-family: sans-serif;
 	margin: 0;
-	height: 100vh;
+	height: 100%;
 }
 
 textarea {
@@ -13,7 +21,10 @@ textarea {
 textarea {
 	border: none;
 	box-sizing: border-box;
+
+	-webkit-flex: 1;
 	flex: 1;
+
 	font-family: inherit;
 	font-size: inherit;
 	outline: none;
@@ -25,11 +36,15 @@ textarea {
 footer {
 	background: black;
 	color: white;
+
+	display: -webkit-flex;
 	display: flex;
 }
 
 footer > div {
+	-webkit-flex: 1;
 	flex: 1;
+
 	margin: 20px;
 	text-align: center;
 }
